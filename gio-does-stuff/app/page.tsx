@@ -8,7 +8,7 @@ export default function Home() {
             Welcome to Gio Does Stuff.
           </h1>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            This website is under construction.
+            This website is under construction. TEST
           </p>
         </div>
       </main>
