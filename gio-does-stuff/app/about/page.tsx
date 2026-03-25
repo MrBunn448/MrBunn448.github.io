@@ -8,7 +8,7 @@ export default function AboutPage() {
           <section className="mt-6 bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 rounded-lg p-6">
             <h2 className="text-xl font-medium text-zinc-900 dark:text-zinc-100">Student</h2>
             <p className="mt-3 text-lg leading-7 text-zinc-700 dark:text-zinc-300">
-              I&apos;m a student at <strong>Fontys University of Applied Sciences</strong>. I am currently focused on software engineering. And this website is meant to take you into this journey with me.
+              I&apos;m a student at <strong>Fontys University of Applied Sciences</strong>. I am currently focused on software engineering. And I hope to share some of the projects I work on right here.
             </p>
 
             <hr className="my-6 border-zinc-100 dark:border-zinc-800" />
