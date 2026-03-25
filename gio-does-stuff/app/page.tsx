@@ -10,6 +10,18 @@ export default function Home() {
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             This website is under construction.
           </p>
+
+          <div className="w-full max-w-md mt-4">
+            <div className="rounded overflow-hidden shadow-sm" style={{ position: 'relative', paddingTop: '56.25%' }}>
+              <iframe
+                src="https://www.youtube.com/embed/F8aJhF9sWsI"
+                title="Gio Does Stuff video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full"
+              />
+            </div>
+          </div>
         </div>
       </main>
     </div>
