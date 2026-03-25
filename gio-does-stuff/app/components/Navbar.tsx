@@ -5,6 +5,12 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const navItems = [
+    { href: '/', label: 'Home' },
+    { href: '/projects', label: 'Projects' },
+    { href: '/about', label: 'About' },
+    { href: '/blog', label: 'Blog' },
+  ];
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
@@ -13,10 +19,15 @@ export default function Navbar() {
           <Link href="/" className="text-lg font-semibold text-black dark:text-zinc-50">Gio Does Stuff</Link>
 
           <nav className="hidden md:flex items-center gap-6">
-            <Link href="/" className="text-sm text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-zinc-50">Home</Link>
-            <Link href="/projects" className="text-sm text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-zinc-50">Projects</Link>
-            <Link href="/about" className="text-sm text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-zinc-50">About</Link>
-            <Link href="/blog" className="text-sm text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-zinc-50">Blog</Link>
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-zinc-50"
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
           <div className="md:hidden">
@@ -41,9 +52,16 @@ export default function Navbar() {
         {open && (
           <div className="md:hidden border-t border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-black/80">
             <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-3 flex flex-col gap-2">
-              <Link href="/" onClick={() => setOpen(false)} className="py-2 text-zinc-700 dark:text-zinc-300">Home</Link>
-              <Link href="/projects" onClick={() => setOpen(false)} className="py-2 text-zinc-700 dark:text-zinc-300">Projects</Link>
-              <Link href="/about" onClick={() => setOpen(false)} className="py-2 text-zinc-700 dark:text-zinc-300">About</Link>
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="py-2 text-zinc-700 dark:text-zinc-300"
+                >
+                  {item.label}
+                </Link>
+              ))}
             </div>
           </div>
         )}
